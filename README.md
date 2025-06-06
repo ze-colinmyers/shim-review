@@ -34,6 +34,8 @@ Provide the information, which can prove the genuineness with certainty.
 Company/tax register entries or equivalent:
 (a link to the organization entry in your jurisdiction's register will do)
 
+<https://find-and-update.company-information.service.gov.uk/company/11995552>
+
 <https://www.dnb.com/business-directory/company-profiles.ziperase_ltd.9b830f4d63bc2de09234cb1a6aa719a2.html>
 
 The public details of both your organization and the issuer in the EV certificate used for signing .cab files at Microsoft Hardware Dev Center File Signing Services.
@@ -190,6 +192,8 @@ Skip this, if you're not using GRUB2, otherwise do you have an entry in your GRU
 *******************************************************************************
 We built from grub-2.12 upstream, added the Feb 2025 patchset, and set sbat to `grub,5`.
 
+<https://lists.gnu.org/archive/html/grub-devel/2025-02/msg00024.html>
+
 *******************************************************************************
 ### Were old shims hashes provided to Microsoft for verification and to be added to future DBX updates?
 ### Does your new chain of trust disallow booting old GRUB2 builds affected by the CVEs?
@@ -329,7 +333,7 @@ shim.ziperase,1,Ziperase,shim,16.0,mail:security@ziperase.com
 ```plain
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 grub,5,Free Software Foundation,grub,2.12,https://www.gnu.org/software/grub/
-grub.ziperase,1,Ziperase,grub,2.12-1,https://ziperase.com/
+grub.ziperase,1,Ziperase,grub,2.12-1,mail:security@ziperase.com
 ```
 
 *******************************************************************************
@@ -366,7 +370,7 @@ N/A - grub only launches locked down Linux kernel.
 ### How do the launched components prevent execution of unauthenticated code?
 Summarize in one or two sentences, how your secure bootchain works on higher level.
 *******************************************************************************
-UEFI firmware verifies shim is signed by MS -> shim verifies grub was signed with vendor cert -> grub verifies kernel was signed with vendor cert -> kernel verifies modules were signed with epehemeral key.
+UEFI firmware verifies shim is signed by MS -> shim verifies grub was signed with vendor cert -> grub verifies kernel was signed with vendor cert -> kernel verifies modules were signed with ephemeral key.
 
 *******************************************************************************
 ### Does your shim load any loaders that support loading unsigned kernels (e.g. certain GRUB2 configurations)?
@@ -394,7 +398,13 @@ A reasonable timeframe of waiting for a review can reach 2-3 months. Helping us 
 
 For newcomers, the applications labeled as [*easy to review*](https://github.com/rhboot/shim-review/issues?q=is%3Aopen+is%3Aissue+label%3A%22easy+to+review%22) are recommended to start the contribution process.
 *******************************************************************************
-I recently conducted several reviews in preparation for this submission.
+I recently conducted several reviews while preparing for this submission.
+
+<https://github.com/rhboot/shim-review/issues/465#issuecomment-2910240698>
+
+<https://github.com/rhboot/shim-review/issues/454#issuecomment-2942169327>
+
+<https://github.com/rhboot/shim-review/issues/463#issuecomment-2910519735>
 
 *******************************************************************************
 ### Add any additional information you think we may need to validate this shim signing application.
